@@ -80,3 +80,52 @@ ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
     //tenth insert
     INSERT INTO Dish (dishNo, dishname, type)
     VALUES ('77', 'Veggie Supreme Pizza', 'en');
+
+//MenuItem Table Inserts
+    //first insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('0', '0', '13', '8.00');
+
+    //second insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('1', '0', '16', '9.00');
+
+    //third insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('2', '0', '44', '10.00');
+
+    //fourth insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('3', '0', '15', '19.00');
+
+    //fifth insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('4', '0', '22', '19.00');
+
+    //sixth insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('5', '3', '44', '6.25');
+
+    //seventh insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('6', '3', '12', '5.50');
+
+    //eighth insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('7', '3', '07', '12.50');
+
+    //ninth insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('8', '3', '19', '13.50');
+
+    //tenth insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('9', '5', '13', '6.00');
+
+    //eleventh insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('10', '5', '15', '15.00');
+
+    //twelfth insert
+    INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
+    VALUES ('11', '5', '22', '14.00');
