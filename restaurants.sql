@@ -1,3 +1,7 @@
+**Author: Garrett Graham
+**Email: gwgraham@uark.edu
+
+
 //Creating Restaurant Table
 CREATE TABLE Restaurant(
 restaurantID INTEGER PRIMARY KEY,
