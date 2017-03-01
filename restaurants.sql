@@ -31,3 +31,52 @@ ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
     //first insert
     INSERT INTO Restaurant (restaurantID, restaurantName, type, city)
     VALUES ('0', 'Tasty Thai', 'Asian', 'Dallas');
+
+    //second insert
+    INSERT INTO Restaurant (restaurantID, restaurantName, type, city)
+    VALUES ('3', 'Eureka Pizza', 'Pizza', 'Fayetteville');
+
+    //third insert
+    INSERT INTO Restaurant (restaurantID, restaurantName, type, city)
+    VALUES ('5', 'Tasty Thai', 'Asian', 'Las Vegas');
+
+//Dish Table Inserts
+    //first insert
+    INSERT INTO Dish (dishNo, dishname, type)
+    VALUES ('13', 'Spring Rolls', 'ap');
+
+    //second insert
+    INSERT INTO Dish (dishNo, dishname, type)
+    VALUES ('15', 'Pad Thai', 'en');
+
+    //third insert
+    INSERT INTO Dish (dishNo, dishname, type)
+    VALUES ('16', 'Pot Stickers', 'ap');
+
+    //fourth insert
+    INSERT INTO Dish (dishNo, dishname, type)
+    VALUES ('22', 'Masaman Curry', 'en');
+
+    //fifth insert
+    INSERT INTO Dish (dishNo, dishname, type)
+    VALUES ('10', 'Custard', 'ds');
+
+    //sixth insert
+    INSERT INTO Dish (dishNo, dishname, type)
+    VALUES ('12', 'Garlic Bread', 'ap');
+
+    //seventh insert
+    INSERT INTO Dish (dishNo, dishname, type)
+    VALUES ('44', 'Salad', 'ap');
+
+    //eighth insert
+    INSERT INTO Dish (dishNo, dishname, type)
+    VALUES ('07', 'Cheese Pizza', 'en');
+
+    //ninth insert
+    INSERT INTO Dish (dishNo, dishname, type)
+    VALUES ('19', 'Pepperoni Pizza', 'en');
+
+    //tenth insert
+    INSERT INTO Dish (dishNo, dishname, type)
+    VALUES ('77', 'Veggie Supreme Pizza', 'en');
