@@ -29,7 +29,7 @@ orderNo INTEGER PRIMARY KEY,
 itemNo INTEGER,
 FOREIGN KEY (itemNo) REFERENCES MenuItem (itemNo) ON DELETE CASCADE,
 dt DATE CHECK (date BETWEEN 2017-01-01 AND dateTo),
-ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+ts TIME NOT NULL);
 
 //Restaurant Table Inserts
     //first insert
@@ -133,3 +133,36 @@ ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
     //twelfth insert
     INSERT INTO MenuItem (itemNo, restaurantNo, dishNo, price)
     VALUES ('11', '5', '22', '14.00');
+
+//FoodOrder Table Inserts
+    //first insert
+    INSERT INTO FoodOrder (orderNo, itemNo, dt, ts)
+    VALUES ('0', '2', '2017-03-01', '10:30');
+
+    //second insert
+    INSERT INTO FoodOrder (orderNo, itemNo, dt, ts)
+    VALUES ('1', '0', '2017-03-02', '15:33');
+
+    //third insert
+    INSERT INTO FoodOrder (orderNo, itemNo, dt, ts)
+    VALUES ('2', '3', '2017-03-01', '15:35');
+
+    //fourth insert
+    INSERT INTO FoodOrder (orderNo, itemNo, dt, ts)
+    VALUES ('3', '5', '2017-03-03', '21:00');
+
+    //fifth insert
+    INSERT INTO FoodOrder (orderNo, itemNo, dt, ts)
+    VALUES ('4', '7', '2017-03-01', '18:11');
+
+    //sixth insert
+    INSERT INTO FoodOrder (orderNo, itemNo, dt, ts)
+    VALUES ('5', '7', '2017-03-04', '18:51');
+
+    //seventh insert
+    INSERT INTO FoodOrder (orderNo, itemNo, dt, ts)
+    VALUES ('6', '9', '2017-03-01', '19:00');
+
+    //eighth insert
+    INSERT INTO FoodOrder (orderNo, itemNo, dt, ts)
+    VALUES ('7', '11', '2017-03-05', '17:15');
