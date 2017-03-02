@@ -166,3 +166,34 @@ ts TIME NOT NULL);
     //eighth insert
     INSERT INTO FoodOrder (orderNo, itemNo, dt, ts)
     VALUES ('7', '11', '2017-03-05', '17:15');
+
+//Queries (ones that I have to create):
+
+
+    //query six
+    SELECT Restaurant.restaurantName, Restaurant.city
+    FROM Restaurant, MenuItem
+    WHERE MenuItem.dishNo = '44' AND MenuItem.restaurantNo = Restaurant.restaurantID;
+
+    //query seven (??)
+    SELECT DISTINCT Restaurant.city, Dish.dishName, MenuItem.price
+    FROM Dish, MenuItem, Restaurant
+    WHERE MenuItem.restaurantNo IN ('0', '5') AND Dish.dishNo = MenuItem.dishNo
+          AND MenuItem.restaurantNo = Restaurant.restaurantID
+    ORDER BY MenuItem.price ASC;
+
+    //query eight
+    SELECT DISTINCT Restaurant.restaurantName, Restaurant.city,
+                    COUNT(DISTINCT MenuItem.dishNo) AS MenuItems,
+                    ROUND(AVG(MenuItem.price), 2) AS AveragePrice
+    FROM Restaurant, MenuItem, Dish
+    WHERE Restaurant.restaurantID = MenuItem.restaurantNo AND MenuItem.dishNo = Dish.dishNo
+          AND MenuItem.dishNo = Dish.dishNo
+    GROUP BY Restaurant.restaurantID;
+
+    //query nine (inProgress)
+    SELECT Restaurant.restaurantName, COUNT(FoodOrder.itemNo) AS TotalOrders,
+           ROUND(AVG(MenuItem.price), 2) AS AverageBasePrice
+    FROM Restaurant, FoodOrder, MenuItem
+    WHERE restaurantID = '3' AND FoodOrder.itemNo = MenuItem.itemNo
+          AND MenuItem.restaurantNo = '3';
