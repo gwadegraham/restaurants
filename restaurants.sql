@@ -175,8 +175,8 @@ ts TIME NOT NULL);
     FROM Restaurant, MenuItem
     WHERE MenuItem.dishNo = '44' AND MenuItem.restaurantNo = Restaurant.restaurantID;
 
-    //query seven (??)
-    SELECT DISTINCT Restaurant.city, Dish.dishName, MenuItem.price
+    //query seven
+    SELECT DISTINCT Restaurant.restaurantName, Dish.dishName, MenuItem.price
     FROM Dish, MenuItem, Restaurant
     WHERE MenuItem.restaurantNo IN ('0', '5') AND Dish.dishNo = MenuItem.dishNo
           AND MenuItem.restaurantNo = Restaurant.restaurantID
@@ -191,9 +191,19 @@ ts TIME NOT NULL);
           AND MenuItem.dishNo = Dish.dishNo
     GROUP BY Restaurant.restaurantID;
 
-    //query nine (inProgress)
+    //query nine
     SELECT Restaurant.restaurantName, COUNT(FoodOrder.itemNo) AS TotalOrders,
-           ROUND(AVG(MenuItem.price), 2) AS AverageBasePrice
+           ROUND(AVG(MenuItem.price), 2) AS AverageBasePrice,
+           SUM(MenuItem.price) AS TotalBasePrice,
+           1.1 * SUM(MenuItem.price) AS TotalWithTax
     FROM Restaurant, FoodOrder, MenuItem
     WHERE restaurantID = '3' AND FoodOrder.itemNo = MenuItem.itemNo
           AND MenuItem.restaurantNo = '3';
+
+    //query ten
+    SELECT COUNT(FoodOrder.itemNo) AS TotalOrders,
+           ROUND(AVG(MenuItem.price), 2) AS AverageBasePrice,
+           SUM(MenuItem.price) AS TotalBasePrice,
+           1.1 * SUM(MenuItem.price) AS TotalWithTax
+    FROM FoodOrder, MenuItem
+    WHERE FoodOrder.itemNo = MenuItem.itemNo;
