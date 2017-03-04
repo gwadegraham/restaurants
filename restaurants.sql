@@ -207,3 +207,9 @@ ts TIME NOT NULL);
            1.1 * SUM(MenuItem.price) AS TotalWithTax
     FROM FoodOrder, MenuItem
     WHERE FoodOrder.itemNo = MenuItem.itemNo;
+
+//Testing
+
+    //testing if "ON DELETE RESTRICT" works
+    DELETE FROM Restaurant
+    WHERE restaurantID = 3;
